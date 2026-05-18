@@ -1,4 +1,4 @@
-/* Authentic MySpace 2006 Aesthetic */
+/* 2008 EDGY PUNK GIRL MYSPACE AESTHETIC */
 
 * {
     margin: 0;
@@ -8,17 +8,18 @@
 
 body {
     font-family: 'Verdana', 'Arial', sans-serif;
-    background-color: #1a1a1a;
-    color: #333;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #0a0a0a);
+    background-attachment: fixed;
+    color: #ccc;
     line-height: 1.5;
 }
 
 /* TOP NAVIGATION BAR */
 .top-nav {
-    background-color: #003366;
-    border-bottom: 3px solid #ff0000;
+    background: linear-gradient(90deg, #000, #1a1a1a, #000);
+    border-bottom: 3px solid #ff1493;
     padding: 8px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(255, 20, 147, 0.5);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -36,8 +37,12 @@ body {
 .myspace-logo {
     font-size: 1.5em;
     font-weight: bold;
-    color: #00ccff;
-    text-shadow: 2px 2px #ff0000;
+    background: linear-gradient(90deg, #ff1493, #00ffff, #ff1493);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 10px #ff1493;
+    letter-spacing: 2px;
 }
 
 .nav-links {
@@ -46,22 +51,27 @@ body {
 }
 
 .nav-links a {
-    color: #ffffff;
+    color: #ff1493;
     text-decoration: none;
     font-size: 0.9em;
     font-weight: bold;
+    text-shadow: 0 0 5px #ff1493;
+    transition: all 0.3s;
 }
 
 .nav-links a:hover {
-    color: #00ccff;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+    transform: scale(1.1);
 }
 
 .login-info {
-    color: #cccccc;
+    color: #00ffff;
     font-size: 0.85em;
+    text-shadow: 0 0 5px #00ffff;
 }
 
-/* MAIN WRAPPER - 3 COLUMN LAYOUT */
+/* MAIN WRAPPER */
 .main-wrapper {
     max-width: 1200px;
     margin: 15px auto;
@@ -71,7 +81,6 @@ body {
     padding: 0 10px;
 }
 
-/* SIDEBAR STYLING */
 .left-sidebar,
 .right-sidebar {
     display: flex;
@@ -97,21 +106,24 @@ body {
 .views-module,
 .mood-module,
 .ads-module {
-    background: linear-gradient(135deg, #ffffff, #f0f8ff);
-    border: 2px solid #003366;
+    background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+    border: 3px solid #ff1493;
     border-radius: 8px;
     padding: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 20px rgba(255, 20, 147, 0.4), inset 0 0 15px rgba(255, 20, 147, 0.1);
 }
 
 .module-title {
-    background: linear-gradient(90deg, #003366, #0066cc);
-    color: #ffffff;
-    padding: 8px;
+    background: linear-gradient(90deg, #ff1493, #00ffff, #ff1493);
+    color: #000;
+    padding: 10px;
     margin: -12px -12px 10px -12px;
     font-size: 1.1em;
-    text-shadow: 1px 1px 0px #000;
+    font-weight: bold;
     border-radius: 6px 6px 0 0;
+    text-shadow: 1px 1px 0px #fff;
+    box-shadow: 0 0 10px rgba(255, 20, 147, 0.6);
+    letter-spacing: 1px;
 }
 
 /* PROFILE MODULE */
@@ -122,37 +134,47 @@ body {
 .profile-pic {
     width: 140px;
     height: 140px;
-    border: 3px solid #003366;
+    border: 4px solid #ff1493;
     margin-bottom: 10px;
+    box-shadow: 0 0 15px #ff1493, 0 0 25px #00ffff;
 }
 
 .profile-name {
     font-size: 1.3em;
     font-weight: bold;
-    color: #003366;
+    background: linear-gradient(90deg, #ff1493, #00ffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     margin: 8px 0;
+    text-shadow: 0 0 10px #ff1493;
 }
 
 .profile-detail {
     font-size: 0.9em;
     margin: 5px 0;
-    color: #333;
+    color: #00ffff;
+    text-shadow: 0 0 3px #00ffff;
 }
 
 .edit-profile-btn {
     width: 100%;
-    padding: 8px;
-    background-color: #0066cc;
-    color: white;
-    border: 2px solid #003366;
+    padding: 10px;
+    background: linear-gradient(90deg, #ff1493, #ff69b4);
+    color: #000;
+    border: 2px solid #00ffff;
     border-radius: 4px;
     font-weight: bold;
     cursor: pointer;
     margin-top: 10px;
+    box-shadow: 0 0 10px #ff1493;
+    transition: all 0.3s;
 }
 
 .edit-profile-btn:hover {
-    background-color: #003366;
+    background: linear-gradient(90deg, #00ffff, #ff1493);
+    box-shadow: 0 0 20px #ff1493, 0 0 30px #00ffff;
+    transform: scale(1.05);
 }
 
 /* ONLINE NOW */
@@ -161,32 +183,42 @@ body {
 }
 
 .online-friend {
-    margin: 6px 0;
-    padding: 4px;
-    background: #f5f5f5;
+    margin: 8px 0;
+    padding: 6px;
+    background: rgba(255, 20, 147, 0.1);
+    border-left: 3px solid #00ffff;
     border-radius: 3px;
+    color: #00ffff;
 }
 
 .online-dot {
     color: #00ff00;
     font-weight: bold;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
 }
 
 /* ABOUT ME */
 .about-text {
     font-size: 0.95em;
     line-height: 1.6;
-    color: #333;
+    color: #ccc;
 }
 
 /* INTERESTS */
 .interest-item {
     font-size: 0.9em;
     margin: 8px 0;
-    padding: 6px;
-    background: #f9f9f9;
-    border-left: 3px solid #0066cc;
+    padding: 8px;
+    background: rgba(0, 255, 255, 0.05);
+    border-left: 3px solid #00ffff;
     padding-left: 10px;
+    color: #00ffff;
+    text-shadow: 0 0 3px #00ffff;
 }
 
 /* TOP FRIENDS */
@@ -203,14 +235,23 @@ body {
 
 .friend-pic img {
     width: 100%;
-    border: 2px solid #0066cc;
+    border: 2px solid #00ffff;
     margin-bottom: 4px;
+    box-shadow: 0 0 10px #ff1493;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.friend-pic img:hover {
+    box-shadow: 0 0 15px #ff1493, 0 0 25px #00ffff;
+    transform: scale(1.1);
 }
 
 .friend-pic p {
     font-size: 0.75em;
     font-weight: bold;
-    color: #003366;
+    color: #ff1493;
+    text-shadow: 0 0 3px #ff1493;
 }
 
 /* VIEW ALL LINKS */
@@ -220,13 +261,17 @@ body {
 }
 
 .view-all a {
-    color: #0066cc;
+    color: #ff1493;
     text-decoration: none;
     font-weight: bold;
+    text-shadow: 0 0 3px #ff1493;
+    transition: all 0.3s;
 }
 
 .view-all a:hover {
     text-decoration: underline;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
 }
 
 /* HEADER BANNER */
@@ -235,140 +280,173 @@ body {
 }
 
 .header-banner {
-    background: linear-gradient(135deg, #ff00ff, #00ffff, #ffff00);
-    border: 3px solid #0066cc;
+    background: linear-gradient(135deg, #ff1493, #00ffff, #ff1493, #00ffff);
+    background-size: 200% 200%;
+    animation: gradientShift 3s ease infinite;
+    border: 4px solid #ff1493;
     padding: 30px;
     text-align: center;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 30px rgba(255, 20, 147, 0.6), inset 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .banner-content h1 {
-    color: #ffffff;
+    color: #000;
     font-size: 2em;
-    text-shadow: 3px 3px 0px #0066cc, 6px 6px 0px #ff0000;
+    text-shadow: 3px 3px 0px #ff1493, 6px 6px 0px #00ffff;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .banner-content p {
     color: #000;
     font-weight: bold;
-    text-shadow: 1px 1px #ffff00;
+    text-shadow: 2px 2px 0px #ff1493;
 }
 
 /* BLOG SECTION */
 .blog-post {
-    background: #ffffff;
-    border: 2px solid #ddd;
+    background: rgba(255, 20, 147, 0.05);
+    border: 2px solid #ff1493;
     border-radius: 6px;
     padding: 12px;
     margin-bottom: 12px;
+    box-shadow: 0 0 10px rgba(255, 20, 147, 0.3);
 }
 
 .post-header {
-    border-bottom: 2px solid #0066cc;
+    border-bottom: 2px solid #00ffff;
     padding-bottom: 8px;
     margin-bottom: 8px;
 }
 
 .post-title {
-    color: #0066cc;
+    color: #ff1493;
     font-size: 1.1em;
     margin-bottom: 5px;
+    text-shadow: 0 0 5px #ff1493;
+    font-weight: bold;
 }
 
 .post-date {
     font-size: 0.8em;
-    color: #666;
+    color: #00ffff;
     font-style: italic;
+    text-shadow: 0 0 3px #00ffff;
 }
 
 .post-body {
     font-size: 0.95em;
     line-height: 1.6;
     margin-bottom: 8px;
-    color: #333;
+    color: #ccc;
 }
 
 .post-footer {
     font-size: 0.85em;
-    color: #0066cc;
+    color: #ff1493;
     text-align: right;
 }
 
 .post-footer a {
-    color: #0066cc;
+    color: #ff1493;
     text-decoration: none;
     font-weight: bold;
+    text-shadow: 0 0 3px #ff1493;
+    transition: all 0.3s;
 }
 
 .post-footer a:hover {
     text-decoration: underline;
+    color: #00ffff;
+    text-shadow: 0 0 8px #00ffff;
 }
 
 /* COMMENTS */
 .write-comment {
-    background: #f9f9f9;
+    background: rgba(0, 255, 255, 0.05);
     padding: 10px;
     margin-bottom: 12px;
     border-radius: 4px;
+    border: 1px solid #00ffff;
 }
 
 .write-comment h4 {
-    color: #0066cc;
+    color: #ff1493;
     margin-bottom: 8px;
     font-size: 0.95em;
+    text-shadow: 0 0 3px #ff1493;
 }
 
 .write-comment textarea {
     width: 100%;
     padding: 8px;
-    border: 1px solid #ccc;
+    border: 1px solid #ff1493;
     border-radius: 4px;
     font-family: 'Verdana', Arial;
     font-size: 0.9em;
     margin-bottom: 8px;
+    background: #0a0a0a;
+    color: #ccc;
+    box-shadow: inset 0 0 5px rgba(255, 20, 147, 0.3);
+}
+
+.write-comment textarea::placeholder {
+    color: #666;
 }
 
 .post-comment-btn {
-    padding: 6px 15px;
-    background-color: #0066cc;
-    color: white;
-    border: 1px solid #003366;
+    padding: 8px 15px;
+    background: linear-gradient(90deg, #ff1493, #ff69b4);
+    color: #000;
+    border: 2px solid #00ffff;
     border-radius: 4px;
     font-weight: bold;
     cursor: pointer;
+    box-shadow: 0 0 10px #ff1493;
+    transition: all 0.3s;
 }
 
 .post-comment-btn:hover {
-    background-color: #003366;
+    background: linear-gradient(90deg, #00ffff, #ff1493);
+    box-shadow: 0 0 15px #ff1493, 0 0 25px #00ffff;
+    transform: scale(1.05);
 }
 
 .comment {
-    background: #f0f8ff;
-    border-left: 4px solid #0066cc;
+    background: rgba(0, 255, 255, 0.08);
+    border-left: 4px solid #ff1493;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 4px;
+    box-shadow: 0 0 8px rgba(255, 20, 147, 0.2);
 }
 
 .comment-header {
     font-weight: bold;
-    color: #0066cc;
+    color: #ff1493;
     margin-bottom: 6px;
     font-size: 0.9em;
+    text-shadow: 0 0 3px #ff1493;
 }
 
 .comment-date {
-    color: #666;
+    color: #00ffff;
     font-style: italic;
     margin-left: 10px;
     font-weight: normal;
+    text-shadow: 0 0 2px #00ffff;
 }
 
 .comment-body {
     font-size: 0.95em;
-    color: #333;
+    color: #ccc;
     line-height: 1.5;
 }
 
@@ -386,37 +464,55 @@ body {
 
 .visitor img {
     width: 100%;
-    border: 2px solid #0066cc;
+    border: 2px solid #00ffff;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 0 8px #ff1493;
+}
+
+.visitor img:hover {
+    box-shadow: 0 0 15px #ff1493, 0 0 20px #00ffff;
+    transform: scale(1.1);
 }
 
 .view-count {
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: bold;
-    color: #0066cc;
+    color: #ff1493;
     text-align: center;
+    text-shadow: 0 0 10px #ff1493;
 }
 
 .view-text {
     text-align: center;
     font-size: 0.9em;
-    color: #666;
+    color: #00ffff;
+    text-shadow: 0 0 3px #00ffff;
 }
 
 .mood-text {
     text-align: center;
-    font-size: 1.3em;
+    font-size: 2em;
     font-weight: bold;
-    color: #ff0000;
+    color: #ff1493;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.mood-text:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 10px #ff1493);
 }
 
 /* FOOTER */
 .footer {
-    background-color: #003366;
-    color: #ffffff;
+    background: linear-gradient(90deg, #000, #1a1a1a, #000);
+    color: #ccc;
     text-align: center;
     padding: 15px;
     margin-top: 20px;
-    border-top: 3px solid #ff0000;
+    border-top: 3px solid #ff1493;
+    box-shadow: 0 0 15px rgba(255, 20, 147, 0.4);
 }
 
 .footer p {
@@ -425,12 +521,15 @@ body {
 }
 
 .footer a {
-    color: #00ccff;
+    color: #ff1493;
     text-decoration: none;
+    text-shadow: 0 0 3px #ff1493;
 }
 
 .footer a:hover {
     text-decoration: underline;
+    color: #00ffff;
+    text-shadow: 0 0 8px #00ffff;
 }
 
 /* RESPONSIVE DESIGN */
