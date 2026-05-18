@@ -9,7 +9,9 @@ function initializeVisitCounter() {
     }
     
     localStorage.setItem('visits', visits);
-    document.getElementById('visit-counter').textContent = visits;
+    if (document.getElementById('profile-views')) {
+        document.getElementById('profile-views').textContent = visits.toLocaleString();
+    }
 }
 
 // Confetti easter egg - type "myspace"
@@ -26,9 +28,9 @@ document.addEventListener('keypress', function(e) {
     }
 });
 
-// Confetti effect
+// Confetti effect with punk colors
 function triggerConfetti() {
-    const confettiCount = 50;
+    const confettiCount = 80;
     
     for (let i = 0; i < confettiCount; i++) {
         createConfetti();
@@ -38,19 +40,21 @@ function triggerConfetti() {
 function createConfetti() {
     const confetti = document.createElement('div');
     confetti.style.position = 'fixed';
-    confetti.style.width = '10px';
-    confetti.style.height = '10px';
-    confetti.style.backgroundColor = randomColor();
+    confetti.style.width = '12px';
+    confetti.style.height = '12px';
+    confetti.style.backgroundColor = randomPunkColor();
     confetti.style.left = Math.random() * window.innerWidth + 'px';
     confetti.style.top = '-10px';
     confetti.style.pointerEvents = 'none';
     confetti.style.zIndex = '9999';
     confetti.style.borderRadius = '50%';
+    confetti.style.boxShadow = `0 0 10px ${randomPunkColor()}`;
     
     document.body.appendChild(confetti);
     
-    const duration = Math.random() * 2000 + 2000;
-    const xOffset = (Math.random() - 0.5) * 200;
+    const duration = Math.random() * 2000 + 2500;
+    const xOffset = (Math.random() - 0.5) * 300;
+    const rotation = Math.random() * 360;
     const startTime = Date.now();
     
     function animate() {
@@ -65,6 +69,7 @@ function createConfetti() {
         confetti.style.top = (progress * window.innerHeight) + 'px';
         confetti.style.left = (parseFloat(confetti.style.left) + xOffset * 0.01) + 'px';
         confetti.style.opacity = 1 - progress;
+        confetti.style.transform = `rotate(${rotation * progress}deg)`;
         
         requestAnimationFrame(animate);
     }
@@ -72,40 +77,66 @@ function createConfetti() {
     animate();
 }
 
-function randomColor() {
-    const colors = ['#ff00ff', '#00ffff', '#ffff00', '#ff69b4', '#00ff00', '#ff6347', '#1e90ff'];
+function randomPunkColor() {
+    const colors = ['#ff1493', '#00ffff', '#ff00ff', '#ff69b4', '#00ff00', '#ffff00', '#ff0000'];
     return colors[Math.floor(Math.random() * colors.length)];
 }
 
-// Interest tag click handlers
+// Mood randomizer
+const moods = [
+    { emoji: '😔', text: 'MISUNDERSTOOD' },
+    { emoji: '😤', text: 'ANGRY' },
+    { emoji: '💔', text: 'HEARTBROKEN' },
+    { emoji: '😭', text: 'CRYING' },
+    { emoji: '🖤', text: 'DARK' },
+    { emoji: '😍', text: 'IN LOVE' },
+    { emoji: '🎸', text: 'ROCKING OUT' },
+    { emoji: '😎', text: 'COOL' }
+];
+
+function changeMood() {
+    const mood = moods[Math.floor(Math.random() * moods.length)];
+    const moodEmoji = document.getElementById('mood-emoji');
+    if (moodEmoji) {
+        moodEmoji.textContent = mood.emoji;
+        moodEmoji.parentElement.querySelector('div:nth-child(2)').textContent = mood.text;
+    }
+}
+
+// Module interactions
 document.addEventListener('DOMContentLoaded', function() {
     initializeVisitCounter();
     
-    const tags = document.querySelectorAll('.interest-tag');
-    tags.forEach(tag => {
-        tag.addEventListener('click', function(e) {
-            e.preventDefault();
-            this.style.backgroundColor = randomColor();
-            this.style.transform = 'scale(1.15) rotate(' + (Math.random() * 20 - 10) + 'deg)';
-            
+    // Make friend pics clickable to change
+    const friendPics = document.querySelectorAll('.friend-pic img');
+    friendPics.forEach(pic => {
+        pic.style.cursor = 'pointer';
+        pic.addEventListener('click', function() {
+            this.style.transform = 'scale(1.2) rotate(-5deg)';
             setTimeout(() => {
                 this.style.transform = 'scale(1) rotate(0deg)';
-            }, 200);
+            }, 300);
         });
     });
-});
-
-// Random tilt on page load
-window.addEventListener('load', function() {
-    const posts = document.querySelectorAll('.post');
-    const boxes = document.querySelectorAll('.profile-box, .box');
     
-    posts.forEach(post => {
-        const randomRotation = (Math.random() - 0.5) * 3;
-        post.style.transform = 'rotate(' + randomRotation + 'deg)';
+    // Make visitor pics clickable
+    const visitors = document.querySelectorAll('.visitor img');
+    visitors.forEach(visitor => {
+        visitor.style.cursor = 'pointer';
+        visitor.addEventListener('click', function() {
+            this.style.filter = 'hue-rotate(' + Math.random() * 360 + 'deg)';
+        });
     });
+
+    // Mood emoji clickable
+    const moodEmoji = document.getElementById('mood-emoji');
+    if (moodEmoji) {
+        moodEmoji.style.cursor = 'pointer';
+        moodEmoji.addEventListener('click', changeMood);
+    }
 });
 
-// Console easter egg
-console.log('%c🎵 Welcome to MySpace 2026! 🎵', 'font-size: 20px; color: #ff00ff; font-weight: bold;');
-console.log('%cType "myspace" anywhere on the page for a surprise! 🎉', 'font-size: 14px; color: #00ffff;');
+// Console easter eggs
+console.log('%c★ WELCOME TO MY PROFILE ★', 'font-size: 18px; color: #ff1493; font-weight: bold; text-shadow: 0 0 10px #00ffff;');
+console.log('%c🖤 im not emo im just into good music 🖤', 'font-size: 12px; color: #00ffff; font-weight: bold;');
+console.log('%cType "myspace" anywhere on the page for a surprise!!!', 'font-size: 11px; color: #ff69b4; font-style: italic;');
