@@ -3,100 +3,282 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Awesome Profile</title>
+    <title>MySpace Profile</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <h1 class="site-title">✨ WELCOME TO MY PROFILE ✨</h1>
-            <p class="tagline">Your name here</p>
-            <marquee class="marquee-banner">🎵 Currently listening to: Your Favorite Song 🎵</marquee>
-        </header>
-
-        <!-- Main Layout -->
-        <div class="main-layout">
-            <!-- Sidebar -->
-            <aside class="sidebar">
-                <div class="profile-box">
-                    <h2>PROFILE</h2>
-                    <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-pic">
-                    <p><strong>Name:</strong> Your Name</p>
-                    <p><strong>Age:</strong> XX</p>
-                    <p><strong>Location:</strong> Your City</p>
-                    <p><strong>Status:</strong> 😎 Living my best life</p>
-                </div>
-
-                <div class="box">
-                    <h2>ABOUT ME</h2>
-                    <p>Write something cool about yourself here! Add your interests, hobbies, and what makes you unique.</p>
-                </div>
-
-                <div class="box contact-box">
-                    <h2>CONTACT</h2>
-                    <p>📧 Email: your@email.com</p>
-                    <p>💬 AIM: YourAIMHandle</p>
-                </div>
-            </aside>
-
-            <!-- Main Content -->
-            <main class="content">
-                <section class="post">
-                    <h2 class="post-title">🎶 LATEST UPDATE</h2>
-                    <p class="post-date">Posted on 05/18/2026</p>
-                    <p>This is where you can write blog posts or updates! Tell everyone what's new with you. You can add multiple posts too!</p>
-                    <div class="comments">
-                        <h3>💬 Comments (2)</h3>
-                        <div class="comment">
-                            <p><strong>Friend #1:</strong> Omg this is awesome!!! 😍</p>
-                        </div>
-                        <div class="comment">
-                            <p><strong>Friend #2:</strong> Dude add me to your top 8! 🎉</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="post">
-                    <h2 class="post-title">🌟 CHECK OUT MY INTERESTS</h2>
-                    <div class="interests">
-                        <span class="interest-tag">anime</span>
-                        <span class="interest-tag">music</span>
-                        <span class="interest-tag">gaming</span>
-                        <span class="interest-tag">movies</span>
-                        <span class="interest-tag">art</span>
-                    </div>
-                </section>
-
-                <section class="post">
-                    <h2 class="post-title">🎬 FAVORITE THINGS</h2>
-                    <div class="favorites">
-                        <div class="fav-item">
-                            <h4>Movie:</h4>
-                            <p>Your favorite movie</p>
-                        </div>
-                        <div class="fav-item">
-                            <h4>Band:</h4>
-                            <p>Your favorite band</p>
-                        </div>
-                        <div class="fav-item">
-                            <h4>Book:</h4>
-                            <p>Your favorite book</p>
-                        </div>
-                        <div class="fav-item">
-                            <h4>Game:</h4>
-                            <p>Your favorite game</p>
-                        </div>
-                    </div>
-                </section>
-
-                <footer class="site-footer">
-                    <p>© 2026 - Made with ❤️ and lots of HTML bling</p>
-                    <p class="footer-text">Last updated: 05/18/2026 | Visited: <span id="visit-counter">1</span> times</p>
-                </footer>
-            </main>
+    <!-- TOP NAVIGATION -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="myspace-logo">MySpace</div>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Browse</a>
+                <a href="#">Search</a>
+                <a href="#">Invite</a>
+                <a href="#">Mail</a>
+                <a href="#">Blog</a>
+            </div>
+            <div class="login-info">Welcome, [Your Name]</div>
         </div>
+    </nav>
+
+    <!-- MAIN WRAPPER - 3 COLUMN LAYOUT -->
+    <div class="main-wrapper">
+        
+        <!-- LEFT SIDEBAR -->
+        <aside class="left-sidebar">
+            
+            <!-- MY PROFILE MODULE -->
+            <div class="profile-module">
+                <div class="module-title">My Profile</div>
+                <div class="profile-content">
+                    <img src="https://via.placeholder.com/140" alt="Profile Picture" class="profile-pic">
+                    <div class="profile-name">Your Name</div>
+                    <div class="profile-detail">Age: XX | City: Your City</div>
+                    <div class="profile-detail">Status: Single</div>
+                    <div class="profile-detail">Last Login: Just Now</div>
+                    <button class="edit-profile-btn">Edit Profile</button>
+                </div>
+            </div>
+
+            <!-- ONLINE NOW MODULE -->
+            <div class="online-module">
+                <div class="module-title">Online Now</div>
+                <div class="online-friends">
+                    <div class="online-friend"><span class="online-dot">●</span> FriendName1</div>
+                    <div class="online-friend"><span class="online-dot">●</span> FriendName2</div>
+                    <div class="online-friend"><span class="online-dot">●</span> FriendName3</div>
+                    <div class="online-friend"><span class="online-dot">●</span> FriendName4</div>
+                    <div class="view-all"><a href="#">View All</a></div>
+                </div>
+            </div>
+
+            <!-- ABOUT ME MODULE -->
+            <div class="about-module">
+                <div class="module-title">About Me</div>
+                <div class="about-text">
+                    Write something interesting about yourself here! Tell people about your interests, hobbies, and what makes you unique.
+                </div>
+            </div>
+
+            <!-- INTERESTS MODULE -->
+            <div class="interests-module">
+                <div class="module-title">My Interests</div>
+                <div class="interest-item">🎵 Music: Your favorite bands</div>
+                <div class="interest-item">🎬 Movies: Your favorite movies</div>
+                <div class="interest-item">📚 Books: Your favorite books</div>
+                <div class="interest-item">🎮 Games: Your favorite games</div>
+            </div>
+
+            <!-- TOP 6 FRIENDS MODULE -->
+            <div class="friends-module">
+                <div class="module-title">Top 6 Friends</div>
+                <div class="top-friends-grid">
+                    <div class="friend-pic">
+                        <img src="https://via.placeholder.com/60" alt="Friend 1">
+                        <p>Friend 1</p>
+                    </div>
+                    <div class="friend-pic">
+                        <img src="https://via.placeholder.com/60" alt="Friend 2">
+                        <p>Friend 2</p>
+                    </div>
+                    <div class="friend-pic">
+                        <img src="https://via.placeholder.com/60" alt="Friend 3">
+                        <p>Friend 3</p>
+                    </div>
+                    <div class="friend-pic">
+                        <img src="https://via.placeholder.com/60" alt="Friend 4">
+                        <p>Friend 4</p>
+                    </div>
+                    <div class="friend-pic">
+                        <img src="https://via.placeholder.com/60" alt="Friend 5">
+                        <p>Friend 5</p>
+                    </div>
+                    <div class="friend-pic">
+                        <img src="https://via.placeholder.com/60" alt="Friend 6">
+                        <p>Friend 6</p>
+                    </div>
+                </div>
+                <div class="view-all"><a href="#">View All My Friends</a></div>
+            </div>
+
+        </aside>
+
+        <!-- CENTER CONTENT -->
+        <main class="center-content">
+            
+            <!-- HEADER BANNER -->
+            <div class="profile-header">
+                <div class="header-banner">
+                    <div class="banner-content">
+                        <h1>✨ WELCOME TO MY PROFILE ✨</h1>
+                        <p>🎵 Living my best life 🎵</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLOG MODULE -->
+            <div class="blog-module">
+                <div class="module-title">My Latest Blog</div>
+                
+                <!-- BLOG POST 1 -->
+                <div class="blog-post">
+                    <div class="post-header">
+                        <div class="post-title">Just Posted Something Cool!</div>
+                        <div class="post-date">Posted on 05/18/2026 at 7:15 PM</div>
+                    </div>
+                    <div class="post-body">
+                        This is where you write your first blog post! Tell everyone what's on your mind. Share your thoughts, feelings, and what you've been up to. Make it interesting and don't forget to check back for comments!
+                    </div>
+                    <div class="post-footer">
+                        <a href="#">Read More</a> | <a href="#">Comments (2)</a>
+                    </div>
+                </div>
+
+                <!-- BLOG POST 2 -->
+                <div class="blog-post">
+                    <div class="post-header">
+                        <div class="post-title">Check Out My Music!</div>
+                        <div class="post-date">Posted on 05/15/2026 at 3:42 PM</div>
+                    </div>
+                    <div class="post-body">
+                        I've been listening to some amazing new music lately! You should definitely check out my profile music player. Let me know what you think about my favorite bands!
+                    </div>
+                    <div class="post-footer">
+                        <a href="#">Read More</a> | <a href="#">Comments (5)</a>
+                    </div>
+                </div>
+
+                <div class="view-all" style="margin-top: 10px;"><a href="#">View All Posts</a></div>
+            </div>
+
+            <!-- COMMENTS MODULE -->
+            <div class="comments-module">
+                <div class="module-title">Profile Comments</div>
+                
+                <!-- WRITE COMMENT -->
+                <div class="write-comment">
+                    <h4>✏️ Post a Comment</h4>
+                    <textarea placeholder="What's on your mind?" rows="4"></textarea>
+                    <button class="post-comment-btn">Post Comment</button>
+                </div>
+
+                <!-- COMMENT 1 -->
+                <div class="comment">
+                    <div class="comment-header">
+                        FriendName1 <span class="comment-date">said on 05/18/2026 at 6:30 PM</span>
+                    </div>
+                    <div class="comment-body">
+                        OMG your profile is SO COOL!!! 😍 Love the design! We need to hang out soon!
+                    </div>
+                </div>
+
+                <!-- COMMENT 2 -->
+                <div class="comment">
+                    <div class="comment-header">
+                        FriendName2 <span class="comment-date">said on 05/17/2026 at 2:15 PM</span>
+                    </div>
+                    <div class="comment-body">
+                        Hey! Haven't talked in forever. How have you been? This MySpace thing is sick! Add me to your top 8!
+                    </div>
+                </div>
+
+                <!-- COMMENT 3 -->
+                <div class="comment">
+                    <div class="comment-header">
+                        FriendName3 <span class="comment-date">said on 05/16/2026 at 11:22 AM</span>
+                    </div>
+                    <div class="comment-body">
+                        Your blog posts are hilarious! Keep them coming! 🎉
+                    </div>
+                </div>
+
+                <div class="view-all"><a href="#">View All Comments</a></div>
+            </div>
+
+        </main>
+
+        <!-- RIGHT SIDEBAR -->
+        <aside class="right-sidebar">
+            
+            <!-- PROFILE VIEWERS MODULE -->
+            <div class="visitors-module">
+                <div class="module-title">Last 10 Visitors</div>
+                <div class="visitors-grid">
+                    <div class="visitor">
+                        <img src="https://via.placeholder.com/45" alt="Visitor 1">
+                    </div>
+                    <div class="visitor">
+                        <img src="https://via.placeholder.com/45" alt="Visitor 2">
+                    </div>
+                    <div class="visitor">
+                        <img src="https://via.placeholder.com/45" alt="Visitor 3">
+                    </div>
+                    <div class="visitor">
+                        <img src="https://via.placeholder.com/45" alt="Visitor 4">
+                    </div>
+                    <div class="visitor">
+                        <img src="https://via.placeholder.com/45" alt="Visitor 5">
+                    </div>
+                    <div class="visitor">
+                        <img src="https://via.placeholder.com/45" alt="Visitor 6">
+                    </div>
+                    <div class="visitor">
+                        <img src="https://via.placeholder.com/45" alt="Visitor 7">
+                    </div>
+                    <div class="visitor">
+                        <img src="https://via.placeholder.com/45" alt="Visitor 8">
+                    </div>
+                    <div class="visitor">
+                        <img src="https://via.placeholder.com/45" alt="Visitor 9">
+                    </div>
+                    <div class="visitor">
+                        <img src="https://via.placeholder.com/45" alt="Visitor 10">
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROFILE VIEWS MODULE -->
+            <div class="views-module">
+                <div class="module-title">Profile Views</div>
+                <div class="view-count" id="profile-views">1,247</div>
+                <div class="view-text">views today</div>
+            </div>
+
+            <!-- MY MOOD MODULE -->
+            <div class="mood-module">
+                <div class="module-title">My Mood</div>
+                <div style="text-align: center; padding: 10px 0;">
+                    <div class="mood-text" id="mood-emoji">😎</div>
+                    <div style="font-weight: bold; color: #0066cc;">Feeling Awesome!</div>
+                </div>
+            </div>
+
+            <!-- WHAT'S NEW MODULE -->
+            <div class="ads-module">
+                <div class="module-title">What's New</div>
+                <div style="padding: 10px 0; font-size: 0.9em; line-height: 1.6; color: #333;">
+                    <p style="margin-bottom: 8px;"><strong>📝 New Blog Post</strong><br>Posted: Just now</p>
+                    <p style="margin-bottom: 8px;"><strong>👥 Added Friend</strong><br>Friend added: NewFriend</p>
+                    <p><strong>💬 New Comment</strong><br>From: FriendName1</p>
+                </div>
+            </div>
+
+        </aside>
+
     </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2026 MySpace, Inc. All Rights Reserved.</p>
+        <p>
+            <a href="#">Terms of Use</a> | 
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Copyright Policy</a>
+        </p>
+        <p>Type "myspace" to see a surprise! 🎉</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
